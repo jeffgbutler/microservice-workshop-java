@@ -14,3 +14,10 @@ management:
     web:
       exposure:
         include: info,health,hystrix.stream
+
+# set the threshold low so we can see the circuit trip
+hystrix:
+  command:
+    default:
+      circuitBreaker:
+        requestVolumeThreshold: 2
