@@ -69,7 +69,7 @@ class App extends Component {
       castMembers: data.castMembers,
       awards: data.awards
     });
-    movies = movies.slice(0, 15);
+    movies = movies.slice(0, 5);
     this.setState((prevState, props) => {
       return {
         started: prevState.started,
