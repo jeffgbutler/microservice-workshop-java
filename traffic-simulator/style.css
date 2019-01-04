@@ -1,0 +1,30 @@
+#urlBox {
+    width: 300px;
+    height: 20px;
+    font-size: 15px;
+  }
+  
+  .mainPage {
+    padding-left: 10px;
+  }
+  
+  #startButton {
+    background-color: green
+  }
+  
+  #stopButton {
+    background-color: red
+  }
+  
+  button {
+    width: 150px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: lightgray;
+  }
+  
+  button:disabled {
+    color: black;
+    opacity: 0.5;
+  }
+  

@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <title>Movie Service Traffic Simulator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>Movie Service Traffic Simulator</h1>
+    <div id="app">
+      <form>
+          Base URL: <input id="urlBox" type="text" v-model="baseURL"/>
+      </form>
+      <br/>
+      <div>
+        <button id="startButton" v-on:click="start" v-bind:disabled="startDisabled">Start</button>
+        &nbsp;
+        <button id="stopButton" v-on:click="stop" v-bind:disabled="!started">Stop</button>
+        &nbsp;
+        <button id="clearButton" v-on:click="clear">Clear History</button>
+      </div>
+  
+      <h2>Movie History</h2>
+      <table border="1" cellSpacing="0" cellPadding="5">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Release Date</th>
+            <th>Run Length</th>
+            <th>Cast Members</th>
+            <th>Awards</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="movie in movies">
+            <td valign="top">{{movie.id}}</td>
+            <td valign="top">{{movie.title}}</td>
+            <td valign="top">{{movie.releaseDate}}</td>
+            <td valign="top">{{movie.runLength}}</td>
+            <td valign="top">
+              <div v-for="castMember in movie.castMembers">
+                {{castMember.role}} : {{castMember.actor}}
+              </div>
+            </td>
+            <td valign="top">
+              <div v-for="award in movie.awards">
+                {{award.year}} : {{award.award}}
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>              
+    </div>
+  </body>
+
+  <script src="vue.min.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+          baseURL: '',
+          started: false,
+          movies: []
+      },
+      computed: {
+        startDisabled: function () {
+          return this.started || this.baseURL ==='';
+        }
+      },
+      methods: {
+        start: function() {
+          this.started = true;
+          this.scheduleUpdate();
+        },
+        stop: function() {
+          this.started = false;
+        },
+        clear: function() {
+          this.movies = [];
+        },
+        scheduleUpdate: function() {
+          setTimeout(() => this.getMovie(), 1000);
+        },
+        addMovie: function(data) {
+          this.movies.unshift({
+            id: data.id,
+            title: data.title,
+            runLength: data.runLength,
+            releaseDate: data.releaseDate,
+            castMembers: data.castMembers,
+            awards: data.awards
+          });
+          this.movies = this.movies.slice(0, 5);
+        },
+        getMovie: function() {
+          let movieId = Math.floor(Math.random() * 20) + 1;
+          fetch(`http://${this.baseURL}/movie/${movieId}`, {method: 'GET'})
+          .then((res) => res.json())
+          .then((data) => {
+            this.addMovie(data);
+          })
+          .catch((err) => {
+            console.log(err);
+          })
+          .then(() => {
+            if (this.started) {
+              this.scheduleUpdate();
+            }
+          })
+        }
+      }
+    });
+  </script>
+</html>
