@@ -1,0 +1,12 @@
+info:
+  app:
+    name: Movie Cast Service
+
+server:
+  port: 8082
+
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2

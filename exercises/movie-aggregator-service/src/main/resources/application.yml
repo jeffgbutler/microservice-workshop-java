@@ -1,0 +1,25 @@
+info:
+  app:
+    name: Movie Aggregator Service
+
+server:
+  port: 8080
+
+# TODO - uncomment (lab 4)
+#feign:
+#  hystrix:
+#    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info,health,hystrix.stream
+
+# set the threshold low so we can see the circuit trip
+# TODO - uncomment (lab 4)
+#hystrix:
+#  command:
+#    default:
+#      circuitBreaker:
+#        requestVolumeThreshold: 2
