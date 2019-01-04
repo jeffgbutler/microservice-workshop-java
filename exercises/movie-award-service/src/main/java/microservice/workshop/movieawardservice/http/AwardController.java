@@ -21,7 +21,7 @@ public class AwardController {
     private AwardRepository repository;
     
     @GetMapping("/search")
-    ResponseEntity<List<Award>> search(@RequestParam("movieId") Integer movieId) {
+    public ResponseEntity<List<Award>> search(@RequestParam("movieId") Integer movieId) {
         List<Award> answer = repository.findByMovieId(movieId);
         return new ResponseEntity<>(answer, HttpStatus.OK);
     }

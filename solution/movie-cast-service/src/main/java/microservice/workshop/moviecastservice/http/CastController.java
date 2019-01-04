@@ -21,7 +21,7 @@ public class CastController {
     private CastMemberRepository repository;
     
     @GetMapping("/search")
-    ResponseEntity<List<CastMember>> search(@RequestParam("movieId") Integer movieId) {
+    public ResponseEntity<List<CastMember>> search(@RequestParam("movieId") Integer movieId) {
         List<CastMember> answer = repository.findByMovieId(movieId);
         return new ResponseEntity<>(answer, HttpStatus.OK);
     }
