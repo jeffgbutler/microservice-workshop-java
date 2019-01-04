@@ -8,8 +8,8 @@ Note: If you experience difficulties building the projects after following these
 Install and configure Java and Git. Some of these steps are optional depending on the IDE you choose and your preferred workflow. If you have experience with these tools then you may feel free to alter the instructions to fit your preferences. If you plan to use Visual Studio Code, then your life will be easier if you use a setup similar to what's shown here.
 
 ### Download/Install 
-1. Install JDK 8 or higher from http://www.oracle.com/technetwork/java/javase/downloads/index.html
-1. Install Git from https://git-scm.com/
+1. Install JDK 8 or higher from [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+1. Install Git from [https://git-scm.com/](https://git-scm.com/)
 
 ### Configure
 If you are using VS Code, your life will be easier if you set the JAVA_HOME environment variable. There are a variety of ways to do this. If you are on Windows, then the easiest way to do this is to use the control panel applet to edit environment variables. We suggest you make these changes to the "user" environment variables and not the "system" environment variables.
@@ -19,8 +19,8 @@ If you are using VS Code, your life will be easier if you set the JAVA_HOME envi
 | JAVA_HOME| Set to the home directory of your JDK installation (for example, \Program Files\Java\jdk-10.0.1) |
 
 ## Setup for Eclipse
-1. Install Eclipse from http://www.eclipse.org/downloads/ - for these exercises the "Eclipse IDE for Java Developers" package is sufficient. If you plan on using Eclipse for web development in the future, then we recommend installing the "Eclipse IDE for Java EE Developers" package
-1. Clone the repository from https://github.com/jeffgbutler/microservice-workshop-java.git, or download the zip from https://github.com/jeffgbutler/microservice-workshop-java/archive/master.zip
+1. Install Eclipse from [http://www.eclipse.org/downloads/](http://www.eclipse.org/downloads/). For these exercises the "Eclipse IDE for Java Developers" package is sufficient. If you plan on using Eclipse for web development in the future, then we recommend installing the "Eclipse IDE for Java EE Developers" package
+1. Clone the repository from [https://github.com/jeffgbutler/microservice-workshop-java.git](https://github.com/jeffgbutler/microservice-workshop-java.git), or download the zip from [https://github.com/jeffgbutler/microservice-workshop-java/archive/master.zip](https://github.com/jeffgbutler/microservice-workshop-java/archive/master.zip)
 1. Open Eclipse, make a new workspace
 1. Import 4 projects from the "/exercises" directory in the cloned code repo (File->Import...->Existing Maven Project)
 1. Start the web service in the `movie-award-service` project by navigating to `microservice.workshop.movieawardservice.MovieAwardServiceApplication.java` and running the class as a Java application
@@ -28,8 +28,8 @@ If you are using VS Code, your life will be easier if you set the JAVA_HOME envi
 1. After you have shown that the service works, terminate the program
  
 ## Setup for IntelliJ
-1. Install IntelliJ Community Edition from https://www.jetbrains.com/idea/download
-1. Clone the repository from https://github.com/jeffgbutler/microservice-workshop-java.git, or download the zip from https://github.com/jeffgbutler/microservice-workshop-java/archive/master.zip
+1. Install IntelliJ Community Edition from [https://www.jetbrains.com/idea/download](https://www.jetbrains.com/idea/download)
+1. Clone the repository from [https://github.com/jeffgbutler/microservice-workshop-java.git](https://github.com/jeffgbutler/microservice-workshop-java.git), or download the zip from [https://github.com/jeffgbutler/microservice-workshop-java/archive/master.zip](https://github.com/jeffgbutler/microservice-workshop-java/archive/master.zip)
 1. Open IntelliJ, make a new empty project
 1. Import 4 Maven projects from the "/exercises" directory in the cloned repo (File->New->Module From Existing Sources...)
 1. Start the web service in the `movie-award-service` project by navigating to `microservice.workshop.movieawardservice.MovieAwardServiceApplication.java` and running the main method in the class
@@ -37,8 +37,8 @@ If you are using VS Code, your life will be easier if you set the JAVA_HOME envi
 1. After you have shown that the service works, terminate the program
 
 ## Setup for Visual Studio Code
-1. Install VS code from https://code.visualstudio.com/
-1. Clone the repository from https://github.com/jeffgbutler/microservice-workshop-java.git, or download the zip from https://github.com/jeffgbutler/microservice-workshop-java/archive/master.zip
+1. Install VS code from [https://code.visualstudio.com/](https://code.visualstudio.com/)
+1. Clone the repository from [https://github.com/jeffgbutler/microservice-workshop-java.git](https://github.com/jeffgbutler/microservice-workshop-java.git), or download the zip from [https://github.com/jeffgbutler/microservice-workshop-java/archive/master.zip](https://github.com/jeffgbutler/microservice-workshop-java/archive/master.zip)
 1. Open VS code in the cloned code repo:
    - cd ...\microservice-workshop-java\exercises
    - code .
