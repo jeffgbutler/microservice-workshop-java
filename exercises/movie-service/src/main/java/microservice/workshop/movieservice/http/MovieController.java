@@ -1,7 +1,7 @@
 package microservice.workshop.movieservice.http;
 
 /*
- * TODO (Lab 1) - Make this a proper rest controller.
+ * TODO (Exercise 2) - Make this a proper rest controller.
  * 
  * The controller should respond to a URL like "/movie/x" where x is a movie id.
  * If the movie exists, return the movie and status OK (200).

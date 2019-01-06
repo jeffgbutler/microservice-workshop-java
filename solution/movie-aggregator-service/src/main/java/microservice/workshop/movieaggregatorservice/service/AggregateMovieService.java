@@ -17,12 +17,12 @@ public class AggregateMovieService {
 
     public Optional<Movie> findById(Integer id) {
         return movieService.findById(id)
-                .flatMap(this::augmentMovie);
+                .map(this::augmentMovie);
     }
     
-    private Optional<Movie> augmentMovie(Movie movie) {
+    private Movie augmentMovie(Movie movie) {
         movie.addAwards(awardService.findAwardsForMovie(movie.getId()));
         movie.addCastMembers(castService.findCastMembers(movie.getId()));
-        return Optional.of(movie);
+        return movie;
     }
 }

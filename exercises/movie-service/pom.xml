@@ -34,7 +34,7 @@
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
     
-<!-- TODO (Lab 3) - uncomment this dependency. With this starter, the app will register with a Eureka
+<!-- TODO (Exercise 4) - uncomment this dependency. With this starter, the app will register with a Eureka
      server on the default port of 8761.
      
     <dependency>

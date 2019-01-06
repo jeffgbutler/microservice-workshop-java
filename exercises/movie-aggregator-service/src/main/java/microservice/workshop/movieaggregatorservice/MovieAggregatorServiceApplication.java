@@ -10,7 +10,7 @@ import microservice.workshop.movieaggregatorservice.service.AggregateMovieServic
 @SpringBootApplication
 @EnableFeignClients
 /*
- * TODO (lab 4) - uncomment this annotation to turn on Hystrix
+ * TODO (Exercise 5) - uncomment this annotation to turn on Hystrix
  *
  * @EnableCircuitBreaker
  */

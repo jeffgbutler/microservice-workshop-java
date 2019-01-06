@@ -5,7 +5,7 @@ The following instructions will help you install a Java development environment 
 Note: If you experience difficulties building the projects after following these instructions, see the Maven Notes section at the bottom of this page.
 
 ## For all Environments
-Install and configure Java and Git. Some of these steps are optional depending on the IDE you choose and your preferred workflow. If you have experience with these tools then you may feel free to alter the instructions to fit your preferences. If you plan to use Visual Studio Code, then your life will be easier if you use a setup similar to what's shown here.
+Install and configure Java and Git. Some of these steps are optional depending on the IDE you choose and your preferred workflow. If you have experience with these tools then you may feel free to alter the instructions to fit your preferences.
 
 ### Download/Install 
 1. Install JDK 8 or higher from [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
@@ -16,7 +16,7 @@ If you are using VS Code, your life will be easier if you set the JAVA_HOME envi
 
 | Environment Variable | Setting |
 |----------------------|---------|
-| JAVA_HOME| Set to the home directory of your JDK installation (for example, \Program Files\Java\jdk-10.0.1) |
+| JAVA_HOME| Set to the home directory of your JDK installation (for example, (Windows) \Program Files\Java\jdk-11.0.1 or (Mac) /Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home) |
 
 ## Setup for Eclipse
 1. Install Eclipse from [http://www.eclipse.org/downloads/](http://www.eclipse.org/downloads/). For these exercises the "Eclipse IDE for Java Developers" package is sufficient. If you plan on using Eclipse for web development in the future, then we recommend installing the "Eclipse IDE for Java EE Developers" package
@@ -48,7 +48,7 @@ If you are using VS Code, your life will be easier if you set the JAVA_HOME envi
    - Open Workplace settings
    - Add setting "java.home": "\<your JDK location\>" (for example "C:\\\\Program Files\\\\Java\\\\jdk-10.0.1")
    - Reload the window (ctrl-shift-P, then "Reload Window")
-1. Open a terminal window at the `movie-award-wervice` folder (right click on the folder, then "Open In Terminal")
+1. Open a terminal window at the `movie-award-service` folder (right click on the folder, then "Open In Terminal")
 1. Start the web service with Maven:
     - (Linux/Mac) ./mvnw clean spring-boot:run
     - (Windows) mvnw clean spring-boor:run

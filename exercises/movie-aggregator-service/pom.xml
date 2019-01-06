@@ -34,7 +34,7 @@
       <artifactId>spring-cloud-starter-openfeign</artifactId>
     </dependency>
 
-<!-- TODO (Lab 4) - uncomment this dependency. This starter includes the components for Hystrix (circuit breaker).
+<!-- TODO (Exercise 5) - uncomment this dependency. This starter includes the components for Hystrix (circuit breaker).
 
     <dependency>
       <groupId>org.springframework.cloud</groupId>
@@ -42,7 +42,7 @@
     </dependency>
  -->
 
-<!-- TODO (Lab 3) - uncomment this dependency. With this starter, the app will register with a Eureka
+<!-- TODO (Exercise 4) - uncomment this dependency. With this starter, the app will register with a Eureka
      server on the default port of 8761.
      
     <dependency>

@@ -10,11 +10,14 @@ feign:
     enabled: true
 
 management:
+  endpoint:
+    health:
+      show-details: always
   endpoints:
     web:
       exposure:
         include: info,health,hystrix.stream
-
+    
 # set the threshold low so we can see the circuit trip
 hystrix:
   command:
