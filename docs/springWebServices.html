@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Microservice Resiliency</title>
+<link rel="stylesheet" href="reveal.js-3.7.0/css/reveal.css">
+<link rel="stylesheet" href="reveal.js-3.7.0/css/theme/moon.css">
+<link rel="stylesheet" href="reveal.js-3.7.0/lib/css/zenburn.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2>Microservice Resiliency</h2>
+        <h3>Spring Web Services</h3>
+        <p style="font-size: smaller">https://github.com/jeffgbutler/microservice-workshop-java/</p>
+        <p style="font-size: smaller">https://jeffgbutler.github.io/microservice-workshop-java/</p>
+      </section>
+
+      <section>
+        <h2>Topics Covered</h2>
+        <ul>
+          <li>Swagger configuration and use</li>
+          <li>@RestController</li>
+          <li>@RequestMapping</li>
+          <li>@Autowired for the repository</li>
+          <li>ResponseEntity</li>
+          <li>@PathVariable</li>
+          <li>@RequestParam</li>
+        </ul>
+      </section>
+
+
+    </div>
+  </div>
+
+  <script src="reveal.js-3.7.0/lib/js/head.min.js"></script>
+  <script src="reveal.js-3.7.0/js/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+        slideNumber: 'c/t',
+        dependencies: [
+            // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+            { src: 'reveal.js-3.7.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+            // Syntax highlight for <code> elements
+            { src: 'reveal.js-3.7.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+            // Zoom in and out with Alt+click
+            { src: 'reveal.js-3.7.0/plugin/zoom-js/zoom.js', async: true },
+
+            // Speaker notes
+            { src: 'reveal.js-3.7.0/plugin/notes/notes.js', async: true }
+        ]
+    });
+  </script>
+</body>
+</html>
