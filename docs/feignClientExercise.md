@@ -1,4 +1,4 @@
-# Feign Client Exercizes
+# Feign Client Exercises
 
 The goal of this exercise is to create Open Feign based clients for the three basic web services, and then use those client to expose a new composed web service.
 

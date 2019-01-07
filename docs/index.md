@@ -1,6 +1,6 @@
-# Overview and Instructions
+# Overview and Exercises
 
-1. [Overview and Fundamentals](workshopOverview.html)
+1. [Workshop Overview](workshopOverview.html)
 1. [Spring Boot Level Set](springBootLevelSet.html)
 1. [Spring Web Services Fundamentals](springWebServices.html)
 1. [Open Feign Overview](feignClients.html)
