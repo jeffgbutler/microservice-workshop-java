@@ -47,6 +47,6 @@ Test the application in the following way:
 
 ## Use the Traffic Simulator
 
-This cloned repo has a simple SPA (single page application), written with Vue.js, that will send random requests to the aggregate service. This will be very useful when we start to work with Hystrix. You can try it now by opening `index.html` in the `/traffic-simulator` directory of the git repo. Once the pace is open in a browser, press the "Start" button to start sending traffic to your new aggregate web service.
+This cloned repo has a simple SPA (single page application), written with Vue.js, that will send random requests to the aggregate service. This will be very useful when we start to work with Hystrix. You can try it now by opening `index.html` in the `/traffic-simulator` directory of the git repo. Once the page is open in a browser, press the "Start" button to start sending traffic to your new aggregate web service.
 
 Once you are satifsfied that everything is working properly, end all four running web services.

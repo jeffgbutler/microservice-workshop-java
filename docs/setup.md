@@ -16,17 +16,17 @@ If you are using VS Code, your life will be easier if you set the JAVA_HOME envi
 
 | Environment Variable | Setting |
 |----------------------|---------|
-| JAVA_HOME| Set to the home directory of your JDK installation (for example, (Windows) \Program Files\Java\jdk-11.0.1 or (Mac) /Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home) |
+| JAVA_HOME| Set to the home directory of your JDK installation (for example, \Program Files\Java\jdk-11.0.1 |
 
 ## Setup for Eclipse
-1. Install Eclipse from [http://www.eclipse.org/downloads/](http://www.eclipse.org/downloads/). For these exercises the "Eclipse IDE for Java Developers" package is sufficient. If you plan on using Eclipse for web development in the future, then we recommend installing the "Eclipse IDE for Java EE Developers" package
+1. Install Eclipse from [http://www.eclipse.org/downloads/](http://www.eclipse.org/downloads/). For these exercises the "Eclipse IDE for Java Developers" package is sufficient.
 1. Clone the repository from [https://github.com/jeffgbutler/microservice-workshop-java.git](https://github.com/jeffgbutler/microservice-workshop-java.git), or download the zip from [https://github.com/jeffgbutler/microservice-workshop-java/archive/master.zip](https://github.com/jeffgbutler/microservice-workshop-java/archive/master.zip)
 1. Open Eclipse, make a new workspace
 1. Import 4 projects from the "/exercises" directory in the cloned code repo (File->Import...->Existing Maven Project)
 1. Run the unit tests in the `movie-award-service` - they should all pass
 1. If you want to experiment with the Swagger UI, follow these steps:
     1. Start the web service in the `movie-award-service` project by navigating to `microservice.workshop.movieawardservice.MovieAwardServiceApplication.java` and running the class as a Java application
-    1. Once the web service starts, open a browser and navigate to http://localhost:8083. You should see the Swagger UI for this web service. You can run a few queries to return some sample data (ids from 1 to 20 will return data)
+    1. Once the web service starts, open a browser and navigate to [http://localhost:8083](http://localhost:8083). You should see the Swagger UI for this web service. You can run a few queries to return some sample data (ids from 1 to 20 will return data)
     1. After you have shown that the service works, terminate the program
  
 ## Setup for IntelliJ
@@ -37,16 +37,16 @@ If you are using VS Code, your life will be easier if you set the JAVA_HOME envi
 1. Run the unit tests in the `movie-award-service` - they should all pass
 1. If you want to experiment with the Swagger UI, follow these steps:
     1. Start the web service in the `movie-award-service` project by navigating to `microservice.workshop.movieawardservice.MovieAwardServiceApplication.java` and running the main method in the class
-    1. Once the web service starts, open a browser and navigate to http://localhost:8083. You should see the Swagger UI for this web service. You can run a few queries to return some sample data (ids from 1 to 20 will return data)
+    1. Once the web service starts, open a browser and navigate to [http://localhost:8083](http://localhost:8083). You should see the Swagger UI for this web service. You can run a few queries to return some sample data (ids from 1 to 20 will return data)
     1. After you have shown that the service works, terminate the program
 
 ## Setup for Visual Studio Code
 Note: the following instructions setup a VS Code workspace with the four exercise projects. I prefer this method of setting up VS Code as it seems to work seemlessly with the different Java based extensions in VS Code. If you have a different preference, please feel free to use it.
 
 1. Install VS code from [https://code.visualstudio.com/](https://code.visualstudio.com/)
-1. Clone the repository from [https://github.com/jeffgbutler/microservice-workshop-java.git](https://github.com/jeffgbutler/microservice-workshop-java.git), or download the zip from [https://github.com/jeffgbutler/microservice-workshop-java/archive/master.zip](https://github.com/jeffgbutler/microservice-workshop-java/archive/master.zip)
 1. Open VS code either with the `code` command, or through the UI
 1. Open the extensions page (ctrl-shift-X), install the Java Extension Pack (from Microsoft) if you haven't already installed that extension
+1. Clone the repository from [https://github.com/jeffgbutler/microservice-workshop-java.git](https://github.com/jeffgbutler/microservice-workshop-java.git), or download the zip from [https://github.com/jeffgbutler/microservice-workshop-java/archive/master.zip](https://github.com/jeffgbutler/microservice-workshop-java/archive/master.zip)
 1. Add the 4 folders under the "/exercises" directory in the cloned repo to the VS Code workspace (File->Add Folder to Workspace...)
 1. Save your workspace file somewhere convenient (File->Save Workspace As...)
 1. If you get the message from VS Code that it can't find the Java Runtime...
@@ -60,7 +60,7 @@ Note: the following instructions setup a VS Code workspace with the four exercis
     1. Start the web service with Maven:
         - (Linux/Mac) ./mvnw clean spring-boot:run
         - (Windows) mvnw clean spring-boor:run
-    1. Once the web service starts, open a browser and navigate to http://localhost:8083. You should see the Swagger UI for this web service. You can run a few queries to return some sample data (ids from 1 to 20 will return data)
+    1. Once the web service starts, open a browser and navigate to [http://localhost:8083](http://localhost:8083). You should see the Swagger UI for this web service. You can run a few queries to return some sample data (ids from 1 to 20 will return data)
     1. After you have shown that the service works, you can end the service by pressing ctrl-c in the terminal window
 
 ## Maven Notes
