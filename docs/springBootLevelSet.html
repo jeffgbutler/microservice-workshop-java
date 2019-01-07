@@ -1,0 +1,136 @@
+<html>
+
+<head>
+  <meta charset="utf-8" >
+  <title>Microservice Resiliency</title>
+  <link rel="stylesheet" href="reveal.js-3.7.0/css/reveal.css">
+  <link rel="stylesheet" href="reveal.js-3.7.0/css/theme/moon.css">
+  <link rel="stylesheet" href="reveal.js-3.7.0/lib/css/obsidian.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2>Microservice Resiliency</h2>
+        <h3>Spring Boot Level Set</h3>
+        <p style="font-size: smaller">https://github.com/jeffgbutler/microservice-workshop-java/</p>
+        <p style="font-size: smaller">https://jeffgbutler.github.io/microservice-workshop-java/</p>
+      </section>
+
+      <section>
+        <h2>What is Spring Boot?</h2>
+        <ul style="font-size: smaller">
+          <li>Spring Based Framework</li>
+          <li>Embedded Server (Tomcat, Jetty, etc.) - make JAR not WAR</li>
+          <li>Currated Dependencies</li>
+          <li>Sensible Defaults</li>
+          <li>Autoconfiguration Magic</li>
+          <li>No XML</li>
+          <li>The de factor standard for microservices in Java</li>
+          <li>Integrates seemlessly with Pivotal Cloud Foundry</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>What is the Spring Initializer?</h2>
+        <ul style="font-size: smaller">
+          <li><a href="https://start.spring.io">https://start.spring.io</a></li>
+          <li>Website that will create a starter project for Spring Boot applications</li>
+          <li>Generates projects using Maven or Gradle as the build system</li>
+          <li>Generates projects using Java, Kotlin, or Groovy as the language</li>
+          <li>Knows about dozens of dependencies and features that can be easily integrated into a Spring Boot project</li>
+          <li>Never ever create another <code>pom.xml</code> file from scratch!</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>The Simplest Spring REST Controller</h2>
+        <pre>
+          <code class="java">
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+            
+@RestController
+public class SimplestController {
+           
+    @GetMapping("/")
+    public String helloWorld() {
+        return "Hello World!";
+    }
+}
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <h2>Swagger</h2>
+        <ul style="font-size: smaller">
+          <li>Swagger is an API documentation and test UI</li>
+          <li>Swagger integration with Spring Boot is through Springfox</li>
+          <li>Unfortunately, Springfox is not on the Spring initializr, so it must be configured by hand</li>
+          <li>The swagger UI is available at <code>/swagger-ui.html</code></li>
+          <li>All exercise projects are configured for Swagger, and the default page will redirect to Swagger</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Starting Spring Boot in Eclipse</h2>
+        <img src="images/sbStartEclipse.png" alt="Starting Spring Boot in Eclipse" height="500px"/>
+      </section>
+
+      <section>
+        <h2>Stopping Spring Boot in Eclipse</h2>
+        <img src="images/sbStopEclipse.png" alt="Stopping Spring Boot in Eclipse" height="250px"/>
+      </section>
+
+      <section>
+        <h2>Starting Spring Boot in IntelliJ</h2>
+        <img src="images/sbStartIntelliJ.png" alt="Starting Spring Boot in IntelliJ" height="500px"/>
+      </section>
+
+      <section>
+        <h2>Stopping Spring Boot in IntelliJ</h2>
+        <img src="images/sbStopIntelliJ.png" alt="Stopping Spring Boot in IntelliJ" height="250px"/>
+      </section>
+
+      <section>
+        <h2>Starting Spring Boot in VS Code</h2>
+        <img src="images/sbStartVSCode.png" alt="Starting Spring Boot in VS Code" height="300px"/>
+      </section>
+
+      <section>
+        <h2>Stopping Spring Boot in VS Code</h2>
+        <img src="images/sbStopVSCode.png" alt="Stopping Spring Boot in VS Code" height="250px"/>
+      </section>
+
+      <section>
+        <h2>Demo</h2>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="reveal.js-3.7.0/lib/js/head.min.js"></script>
+  <script src="reveal.js-3.7.0/js/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      slideNumber: 'c/t',
+      dependencies: [
+        // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+        { src: 'reveal.js-3.7.0/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+
+        // Syntax highlight for <code> elements
+        { src: 'reveal.js-3.7.0/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+
+        // Zoom in and out with Alt+click
+        { src: 'reveal.js-3.7.0/plugin/zoom-js/zoom.js', async: true },
+
+        // Speaker notes
+        { src: 'reveal.js-3.7.0/plugin/notes/notes.js', async: true }
+      ]
+    });
+  </script>
+</body>
+
+</html>
