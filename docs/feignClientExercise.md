@@ -43,7 +43,7 @@ Test the application in the following way:
 
 1. Start all three of the individual web services by running the three application classes in each project, or by using the spring-boot:run maven goal on each project
 1. Once all three application are running, you should be able to run the test `microservice.workshop.movieaggregatorservice.test.AggregateMovieControllerTest` in the `movie-aggregator-service` project successfully
-1. Start the movie-aggregator-service application and access it's swagger interface at http://localhost:8080
+1. Start the movie-aggregator-service application and access it's swagger interface at [http://localhost:8080](http://localhost:8080)
 
 ## Use the Traffic Simulator
 

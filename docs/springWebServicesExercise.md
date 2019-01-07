@@ -9,7 +9,7 @@ The goal of this exercise is to create simple web services using existing JPA re
     - You should inject the `CastMemberRepository` to gain access to the JPA repository for cast members
     - the REST URL should be `/cast/search?movieId=x` where x is a movie id
 1. When you are finished, the tests in the class `microservice.workshop.moviecastservice.http.CastControllerTest` should pass.
-1. You can also start the application and access the Swagger ui at http://localhost:8082
+1. You can also start the application and access the Swagger ui at [http://localhost:8082](http://localhost:8082)
 
 ## Movie Service
 
@@ -19,4 +19,4 @@ The goal of this exercise is to create simple web services using existing JPA re
     - the REST URL should be `/movie/x` where x is a movie id
     - If no movie exists, return a 404 (NOT_FOUND) status
 1. When you are finished, the tests in the class `microservice.workshop.movieservice.http.MovieControllerTest` should pass.
-1. You can also start the application and access the Swagger ui at http://localhost:8081
+1. You can also start the application and access the Swagger ui at [http://localhost:8081](http://localhost:8081)

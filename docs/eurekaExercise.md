@@ -6,7 +6,7 @@ In this exercise, we will install and configure a Eureka server for service disc
 
 There is a simple Spring boot starter that will stand up a eureka server with almost no coding required. We'll use the Spring initializer web site to create the server.
 
-1. Navigate to https://start.spring.io
+1. Navigate to [https://start.spring.io](https://start.spring.io)
 1. Create a Maven project with Java and the latest version of SpringBoot (2.1.1 at the time of writing)
 1. Specify group: `microservice.workshop`
 1. Specify artifact: `eureka-server`
@@ -38,7 +38,7 @@ eureka:
 
 These changes specify the port for the Eureka server (not really needed in this case because 8761 is default). More importantly, they tell the server not to register with Eureka - without these settings the server would try to register with itself!
 
-Once these changes are made, start the server by starting the Spring boot application. After it starts, you can see the Eureka console at http://localhost:8761
+Once these changes are made, start the server by starting the Spring boot application. After it starts, you can see the Eureka console at [http://localhost:8761](http://localhost:8761)
 
 ## Individual Web Services - Register with Eureka
 
