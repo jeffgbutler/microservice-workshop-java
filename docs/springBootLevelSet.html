@@ -45,28 +45,40 @@
       </section>
 
       <section>
-        <h2>The Simplest Spring REST Controller</h2>
-        <pre>
-          <code class="java">
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-            
-@RestController
-public class SimplestController {
-           
-    @GetMapping("/")
-    public String helloWorld() {
-        return "Hello World!";
-    }
-}
-          </code>
-        </pre>
+        <h2>Spring Actuator</h2>
+        <ul style="font-size: smaller">
+          <li>Exposes a standard set of endpoints for you application - accessible through JMX and web</li>
+          <li>Most web endpoints are disabled by default</li>
+          <li><code>/actuator/health</code> shows health status of your application</li>
+          <li><code>/actuator/info</code> shows basic information about your application</li>
+          <li>Highly configurable with sensible defaults</li>
+        </ul>
+      </section>
+  
+      <section>
+        <h2>Spring JPA</h2>
+        <ul style="font-size: smaller">
+          <li>Used to create repositories (ORM to RDB)</li>
+          <li>Includes findById, findAll, save, etc.</li>
+          <li>Declarative method names for extra methods</li>
+          <li>Very little code required</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Spring REST</h2>
+        <ul style="font-size: smaller">
+          <li>Used to create REST controllers</li>
+          <li>Accepts/Returns JSON by default</li>
+          <li>Hand coded REST methods, but very simple</li>
+          <li>Alternative: Spring Data REST will create HATEOAS/HAL based web services with no code at all</li>
+        </ul>
       </section>
 
       <section>
         <h2>Swagger</h2>
         <ul style="font-size: smaller">
-          <li>Swagger is an API documentation and test UI</li>
+          <li>Swagger is a REST API documentation standard and test UI</li>
           <li>Swagger integration with Spring Boot is through Springfox</li>
           <li>Unfortunately, Springfox is not on the Spring initializr, so it must be configured by hand</li>
           <li>The swagger UI is available at <code>/swagger-ui.html</code></li>
@@ -106,6 +118,7 @@ public class SimplestController {
 
       <section>
         <h2>Demo</h2>
+        <p>Danger - Live Coding Ahead!</p>
       </section>
 
     </div>
