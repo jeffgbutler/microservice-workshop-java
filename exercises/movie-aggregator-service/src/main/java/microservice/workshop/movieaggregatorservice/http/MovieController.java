@@ -1,7 +1,6 @@
 package microservice.workshop.movieaggregatorservice.http;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,16 +21,6 @@ public class MovieController {
     @GetMapping("/{id}")
     @CrossOrigin(origins="*")
     public ResponseEntity<Movie> getById(@PathVariable("id") Integer id) {
-        return service.findById(id)
-                .map(this::found)
-                .orElseGet(this::notFound);
-    }
-    
-    private ResponseEntity<Movie> found(Movie movie) {
-        return new ResponseEntity<>(movie, HttpStatus.OK);
-    }
-
-    private ResponseEntity<Movie> notFound() {
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return ResponseEntity.of(service.findById(id));
     }
 }
