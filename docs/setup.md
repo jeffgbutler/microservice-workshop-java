@@ -59,7 +59,7 @@ Note: the following instructions setup a VS Code workspace with the four exercis
     1. Open a terminal window at the `movie-award-service` folder (right click on the folder, then "Open In Terminal")
     1. Start the web service with Maven:
         - (Linux/Mac) ./mvnw clean spring-boot:run
-        - (Windows) mvnw clean spring-boor:run
+        - (Windows) mvnw clean spring-boot:run
     1. Once the web service starts, open a browser and navigate to [http://localhost:8083](http://localhost:8083). You should see the Swagger UI for this web service. You can run a few queries to return some sample data (ids from 1 to 20 will return data)
     1. After you have shown that the service works, you can end the service by pressing ctrl-c in the terminal window
 
