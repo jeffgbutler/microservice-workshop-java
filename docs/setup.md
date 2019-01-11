@@ -44,7 +44,7 @@ If you are using VS Code, your life will be easier if you set the JAVA_HOME envi
 Note: the following instructions setup a VS Code workspace with the four exercise projects. I prefer this method of setting up VS Code as it seems to work seemlessly with the different Java based extensions in VS Code. If you have a different preference, please feel free to use it.
 
 1. Install VS code from [https://code.visualstudio.com/](https://code.visualstudio.com/)
-1. Open VS code either with the `code` command, or through the UI
+1. Open VS code either with the `code` command, or through the UI (Note: do not simply open VS Code on the "exercises" folder. The Java extensions currently have difficulties with maven projects in sub-directories.)
 1. Open the extensions page (ctrl-shift-X), install the Java Extension Pack (from Microsoft) if you haven't already installed that extension
 1. Clone the repository from [https://github.com/jeffgbutler/microservice-workshop-java.git](https://github.com/jeffgbutler/microservice-workshop-java.git), or download the zip from [https://github.com/jeffgbutler/microservice-workshop-java/archive/master.zip](https://github.com/jeffgbutler/microservice-workshop-java/archive/master.zip)
 1. Add the 4 folders under the "/exercises" directory in the cloned repo to the VS Code workspace (File->Add Folder to Workspace...)
