@@ -37,7 +37,7 @@ new Vue({
         timestamp: new Date().toLocaleString(),
         message: err.message
       });
-      this.movies = this.movies.slice(0, 10);
+      this.errors = this.errors.slice(0, 10);
     },
     addMovie: function(data) {
       this.movies.unshift({
