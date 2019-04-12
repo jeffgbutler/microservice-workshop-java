@@ -30,7 +30,7 @@ All work for this exercise will be in the `movie-aggregator-service` project.
 
 ## Movie Aggregate Service
 
-Make the collowing change to the class `AggregateMovieService` in the `microservice.workshop.movieaggregatorservice.service` package
+Make the following change to the class `AggregateMovieService` in the `microservice.workshop.movieaggregatorservice.service` package
 
 1. Inject the three new services you just created
 1. Alter the `findById` method so that it returns an aggregated object. Call the `MovieService` first. If it returns a movie, then call the other two web services to complete the object
