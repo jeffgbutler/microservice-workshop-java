@@ -38,6 +38,14 @@ There is a simple Spring Boot starter that will stand up a Eureka server with al
 
     These changes specify the port for the Eureka server (not really needed in this case because 8761 is default). More importantly, they tell the server not to register with Eureka - without these settings the server would try to register with itself!
 
+1. If you are running with Java9+, then you will need to add a dependency for JAXB. Open `pom.xml` and add the following in the `<dependencies>` section:
+
+    ```xml
+    <dependency>
+      <groupId>org.glassfish.jaxb</groupId>
+      <artifactId>jaxb-runtime</artifactId>
+    </dependency>
+    ```
 1. Once these changes are made, start the server by starting the Spring boot application. After it starts, you can see the Eureka console at [http://localhost:8761](http://localhost:8761)
 
 ## Individual Web Services - Register with Eureka
