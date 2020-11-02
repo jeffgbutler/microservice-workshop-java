@@ -3,9 +3,11 @@ info:
     name: Movie Service
 
 server:
-  port: 8081
+  port: 8091
 
 spring:
+  application:
+    name: movie-service
   h2:
     console:
       enabled: true
