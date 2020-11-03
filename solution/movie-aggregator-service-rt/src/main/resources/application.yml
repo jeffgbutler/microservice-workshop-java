@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: movie-aggregator-service-rt
+
+info:
+  app:
+    name: Movie Aggregator Service (RT)
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: info,health,prometheus
+
+eureka:
+  client:
+    enabled: true
+
