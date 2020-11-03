@@ -1,10 +1,18 @@
-spring:
-  application:
-    name: movie-aggregator-service-rt
-
 info:
   app:
     name: Movie Aggregator Service (RT)
+
+spring:
+  application:
+    name: movie-aggregator-service-rt
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+eureka:
+  client:
+    enabled: true
 
 management:
   endpoint:
@@ -14,8 +22,3 @@ management:
     web:
       exposure:
         include: info,health,prometheus
-
-eureka:
-  client:
-    enabled: true
-

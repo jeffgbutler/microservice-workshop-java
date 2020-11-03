@@ -57,7 +57,6 @@
       <artifactId>micrometer-registry-prometheus</artifactId>
     </dependency>
     
-
     <!-- Swagger setup... -->
     <dependency>
       <groupId>io.springfox</groupId>
