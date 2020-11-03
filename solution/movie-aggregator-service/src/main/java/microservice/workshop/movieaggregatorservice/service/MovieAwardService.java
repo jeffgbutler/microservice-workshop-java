@@ -7,9 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import microservice.workshop.movieaggregatorservice.model.MovieAward;
-import microservice.workshop.movieaggregatorservice.service.fallback.MovieAwardServiceFallback;
 
-@FeignClient(name="movie-award-service", fallback=MovieAwardServiceFallback.class)
+@FeignClient(name="movie-award-service")
 public interface MovieAwardService {
 
     @GetMapping("/award/search")

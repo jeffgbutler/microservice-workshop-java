@@ -2,11 +2,19 @@ info:
   app:
     name: Movie Aggregator Service
 
+spring:
+  application:
+    name: movie-aggregator-service
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+
 server:
   port: 8080
 
-feign:
-  hystrix:
+eureka:
+  client:
     enabled: true
 
 management:
@@ -16,11 +24,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: info,health,hystrix.stream
-    
-# set the threshold low so we can see the circuit trip
-hystrix:
-  command:
-    default:
-      circuitBreaker:
-        requestVolumeThreshold: 2
+        include: info,health

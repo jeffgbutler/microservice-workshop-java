@@ -7,9 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import microservice.workshop.movieaggregatorservice.model.Movie;
-import microservice.workshop.movieaggregatorservice.service.fallback.MovieServiceFallback;
 
-@FeignClient(name="movie-service", decode404=true, fallback=MovieServiceFallback.class)
+@FeignClient(name="movie-service", decode404=true)
 public interface MovieService {
 
     @GetMapping("/movie/{id}")
