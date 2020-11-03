@@ -1,0 +1,6 @@
+applications:
+- name: movie-consumer-service-rest-template
+  path: target/movie-aggregator-service-rt-0.0.1-SNAPSHOT.jar
+  random-route: true
+  services:
+  - eureka-registry

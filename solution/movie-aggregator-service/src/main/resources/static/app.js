@@ -1,7 +1,7 @@
 new Vue({
   el: "#app",
   data: {
-    baseURL: "localhost:8080",
+    baseURL: "http://localhost:8080",
     started: false,
     movies: [],
     errors: []
@@ -52,7 +52,7 @@ new Vue({
     },
     getMovie: function() {
       let movieId = Math.floor(Math.random() * 20) + 1;
-      fetch(`http://${this.baseURL}/movie/${movieId}`, { method: "GET" })
+      fetch(`${this.baseURL}/movie/${movieId}`, { method: "GET" })
         .then(res => res.json())
         .then(data => {
           this.addMovie(data);
