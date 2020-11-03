@@ -35,23 +35,29 @@ public class AggregateMovieService {
     private Optional<Movie> findMovie(Integer id) {
         return cbFactory.create("movie-service-cb").run(
                 () -> movieService.findById(id),
-                t -> Optional.empty()
+                this::emptyOptionalFallback
                 );
     }
     
     private List<MovieAward> findAwards(Integer id) {
-        return cbFactory.create("movie-award-service-cb").run
-                (
-                        () -> awardService.findAwardsForMovie(id),
-                        t -> Collections.emptyList()
+        return cbFactory.create("movie-award-service-cb").run(
+                () -> awardService.findAwardsForMovie(id),
+                this::emptyListFallback
                 );
     }
 
     private List<CastMember> findCastMembers(Integer id) {
-        return cbFactory.create("movie-cast-service-cb").run
-                (
-                        () -> castService.findCastMembers(id),
-                        t -> Collections.emptyList()
+        return cbFactory.create("movie-cast-service-cb").run(
+                () -> castService.findCastMembers(id),
+                this::emptyListFallback
                 );
+    }
+    
+    private <T> List<T> emptyListFallback(Throwable t) {
+        return Collections.emptyList();
+    }
+    
+    private <T> Optional<T> emptyOptionalFallback(Throwable t) {
+        return Optional.empty();
     }
 }

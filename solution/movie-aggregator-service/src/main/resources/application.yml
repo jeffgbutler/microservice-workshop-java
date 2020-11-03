@@ -10,9 +10,6 @@ spring:
       ribbon:
         enabled: false
 
-server:
-  port: 8080
-
 eureka:
   client:
     enabled: true
@@ -24,4 +21,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: info,health
+        include: info,health,prometheus
