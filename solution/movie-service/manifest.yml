@@ -1,6 +1,8 @@
 applications:
-- name: movie-producer-service
+- name: java-movie-producer-service
   path: target/movie-service-0.0.1-SNAPSHOT.jar
   random-route: true
   services:
-  - eureka-registry
+  - movie-service-registry
+  env:
+    JBP_CONFIG_OPEN_JDK_JRE: "{jre: {version: 11.+}}"

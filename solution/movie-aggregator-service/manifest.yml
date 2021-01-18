@@ -1,6 +1,8 @@
 applications:
-- name: movie-consumer-service-feign
+- name: java-movie-consumer-service-feign
   path: target/movie-aggregator-service-0.0.1-SNAPSHOT.jar
   random-route: true
   services:
-  - eureka-registry
+  - movie-service-registry
+  env:
+    JBP_CONFIG_OPEN_JDK_JRE: "{jre: {version: 11.+}}"
