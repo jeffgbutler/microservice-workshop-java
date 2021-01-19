@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: movie-service
+  name: movie-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: movie-service
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: movie-service
+    spec:
+      containers:
+        - image: movie-service:0.0.1-SNAPSHOT
+          name: movie-service
+          imagePullPolicy: Never
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: movie-service
+  name: movie-service
+spec:
+  ports:
+    - port: 8091
+      protocol: TCP
+      targetPort: 8091
+  selector:
+    app: movie-service
+  type: LoadBalancer
+status:
+  loadBalancer: {}

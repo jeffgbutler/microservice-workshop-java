@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: movie-cast-service
+  name: movie-cast-service
+spec:
+  ports:
+    - port: 8092
+      protocol: TCP
+      targetPort: 8092
+  selector:
+    app: movie-cast-service
+  type: ClusterIP
+status:
+  loadBalancer: {}

@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: movie-award-service
+  name: movie-award-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: movie-award-service
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: movie-award-service
+    spec:
+      containers:
+        - image: movie-award-service:0.0.1-SNAPSHOT
+          name: movie-award-service
+          imagePullPolicy: Never
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: movie-award-service
+  name: movie-award-service
+spec:
+  ports:
+    - port: 8093
+      protocol: TCP
+      targetPort: 8093
+  selector:
+    app: movie-award-service
+  type: LoadBalancer
+status:
+  loadBalancer: {}

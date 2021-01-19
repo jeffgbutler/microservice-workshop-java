@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: movie-cast-service
+  name: movie-cast-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: movie-cast-service
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: movie-cast-service
+    spec:
+      containers:
+        - image: movie-cast-service:0.0.1-SNAPSHOT
+          name: movie-cast-service
+          imagePullPolicy: Never
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: movie-cast-service
+  name: movie-cast-service
+spec:
+  ports:
+    - port: 8092
+      protocol: TCP
+      targetPort: 8092
+  selector:
+    app: movie-cast-service
+  type: LoadBalancer
+status:
+  loadBalancer: {}

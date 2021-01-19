@@ -38,10 +38,6 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
-    <dependency>
-      <groupId>io.pivotal.spring.cloud</groupId>
-      <artifactId>spring-cloud-services-starter-service-registry</artifactId>
-    </dependency>
 
     <!-- Swagger setup... -->
     <dependency>

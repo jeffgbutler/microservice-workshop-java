@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: movie-aggregator-service-rt
+  name: movie-aggregator-service-rt
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: movie-aggregator-service-rt
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: movie-aggregator-service-rt
+    spec:
+      containers:
+        - image: movie-aggregator-service-rt:0.0.1-SNAPSHOT
+          name: movie-aggregator-service-rt
+          imagePullPolicy: Never
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: movie-aggregator-service-rt
+  name: movie-aggregator-service-rt
+spec:
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: movie-aggregator-service-rt
+  type: LoadBalancer
+status:
+  loadBalancer: {}
