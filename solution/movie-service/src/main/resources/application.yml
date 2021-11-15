@@ -12,3 +12,6 @@ spring:
     console:
       enabled: true
       path: /h2
+
+springdoc:
+  packages-to-scan: microservice.workshop.movieservice.http

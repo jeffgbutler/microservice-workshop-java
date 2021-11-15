@@ -22,3 +22,6 @@ management:
     web:
       exposure:
         include: info,health,prometheus
+
+springdoc:
+  packages-to-scan: microservice.workshop.movieaggregatorservicert.http
