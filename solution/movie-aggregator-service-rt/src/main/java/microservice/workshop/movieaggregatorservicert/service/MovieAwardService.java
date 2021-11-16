@@ -4,7 +4,6 @@ import java.net.URI;
 import java.util.Collections;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -20,12 +19,15 @@ import microservice.workshop.movieaggregatorservicert.model.MovieAward;
 @Service
 public class MovieAwardService {
 
-    @Autowired
-    private RestTemplate restTemplate;
-    @Autowired
-    private DiscoveryClient discoveryClient;
-    @Autowired
-    private CircuitBreakerFactory<?, ?> cbFactory;
+    private final RestTemplate restTemplate;
+    private final DiscoveryClient discoveryClient;
+    private final CircuitBreakerFactory<?, ?> cbFactory;
+
+    public MovieAwardService(RestTemplate restTemplate, DiscoveryClient discoveryClient, CircuitBreakerFactory<?,?> cbFactory) {
+        this.restTemplate = restTemplate;
+        this.discoveryClient = discoveryClient;
+        this.cbFactory = cbFactory;
+    }
 
     public List<MovieAward> findAwardsForMovie(Integer movieId) {
         return cbFactory.create("movie-award-service-cb").run(
@@ -42,7 +44,7 @@ public class MovieAwardService {
                 .orElseThrow(() -> new IllegalStateException("movie-award-service not available"));
         
         ResponseEntity<List<MovieAward>> ent =
-                restTemplate.exchange(url, HttpMethod.GET, null, new ParameterizedTypeReference<List<MovieAward>>() {});
+                restTemplate.exchange(url, HttpMethod.GET, null, new ParameterizedTypeReference<>() {});
         return ent.getBody();
         
     }

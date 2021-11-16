@@ -9,8 +9,8 @@ public class Movie {
     private String title;
     private LocalDate releaseDate;
     private int runLength;
-    private List<MovieAward> awards = new ArrayList<>();
-    private List<CastMember> castMembers = new ArrayList<>();
+    private final List<MovieAward> awards = new ArrayList<>();
+    private final List<CastMember> castMembers = new ArrayList<>();
     
     public List<MovieAward> getAwards() {
         return awards;

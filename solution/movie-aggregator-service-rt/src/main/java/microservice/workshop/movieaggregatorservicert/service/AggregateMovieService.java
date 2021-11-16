@@ -2,7 +2,6 @@ package microservice.workshop.movieaggregatorservicert.service;
 
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import microservice.workshop.movieaggregatorservicert.model.Movie;
@@ -10,12 +9,15 @@ import microservice.workshop.movieaggregatorservicert.model.Movie;
 @Service
 public class AggregateMovieService {
     
-    @Autowired
-    private MovieService movieService;
-    @Autowired
-    private MovieAwardService awardService;
-    @Autowired
-    private MovieCastService castService;
+    private final MovieService movieService;
+    private final MovieAwardService awardService;
+    private final MovieCastService castService;
+
+    public AggregateMovieService(MovieService movieService, MovieAwardService awardService, MovieCastService castService) {
+        this.movieService = movieService;
+        this.awardService = awardService;
+        this.castService = castService;
+    }
 
     public Optional<Movie> findById(Integer id) {
         return movieService.findById(id)

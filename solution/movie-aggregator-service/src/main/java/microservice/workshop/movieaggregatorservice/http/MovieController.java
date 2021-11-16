@@ -1,6 +1,5 @@
 package microservice.workshop.movieaggregatorservice.http;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,9 +14,12 @@ import microservice.workshop.movieaggregatorservice.service.AggregateMovieServic
 @RequestMapping("/movie")
 public class MovieController {
 
-    @Autowired
-    private AggregateMovieService service;
-    
+    private final AggregateMovieService service;
+
+    public MovieController(AggregateMovieService service) {
+        this.service = service;
+    }
+
     @GetMapping("/{id}")
     @CrossOrigin(origins="*")
     public ResponseEntity<Movie> getById(@PathVariable("id") Integer id) {

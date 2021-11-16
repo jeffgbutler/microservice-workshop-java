@@ -3,7 +3,6 @@ package microservice.workshop.movieaggregatorservicert.service;
 import java.net.URI;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -16,12 +15,15 @@ import microservice.workshop.movieaggregatorservicert.model.Movie;
 @Service
 public class MovieService {
 
-    @Autowired
-    private RestTemplate restTemplate;
-    @Autowired
-    private DiscoveryClient discoveryClient;
-    @Autowired
-    private CircuitBreakerFactory<?, ?> cbFactory;
+    private final RestTemplate restTemplate;
+    private final DiscoveryClient discoveryClient;
+    private final CircuitBreakerFactory<?, ?> cbFactory;
+
+    public MovieService(RestTemplate restTemplate, DiscoveryClient discoveryClient, CircuitBreakerFactory<?,?> cbFactory) {
+        this.restTemplate = restTemplate;
+        this.discoveryClient = discoveryClient;
+        this.cbFactory = cbFactory;
+    }
 
     public Optional<Movie> findById(Integer id) {
         return cbFactory.create("movie-service-cb").run(
