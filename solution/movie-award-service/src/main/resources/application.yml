@@ -15,3 +15,8 @@ spring:
 
 springdoc:
   packages-to-scan: microservice.workshop.movieawardservice.http
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

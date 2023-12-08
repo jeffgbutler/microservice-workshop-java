@@ -1,9 +1,9 @@
 package microservice.workshop.movieawardservice.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class Award {
@@ -12,7 +12,7 @@ public class Award {
     private Integer id;
     private Integer movieId;
     private String movieTitle;
-    private Integer year;
+    private Integer awardYear;
     private String award;
 
     public Integer getId() {
@@ -39,12 +39,12 @@ public class Award {
         this.movieTitle = movieTitle;
     }
 
-    public Integer getYear() {
-        return year;
+    public Integer getAwardYear() {
+        return awardYear;
     }
 
-    public void setYear(Integer year) {
-        this.year = year;
+    public void setAwardYear(Integer releaseYear) {
+        this.awardYear = releaseYear;
     }
 
     public String getAward() {

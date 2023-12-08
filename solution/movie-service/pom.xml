@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.5.6</version>
+    <version>3.2.0</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>microservice.workshop</groupId>
@@ -14,8 +14,9 @@
   <name>movie-service</name>
   <description>Demo project for Spring Boot</description>
   <properties>
-    <java.version>11</java.version>
-    <spring-cloud.version>2020.0.4</spring-cloud.version>
+    <java.version>17</java.version>
+    <spring-cloud.version>2023.0.0</spring-cloud.version>
+    <springdoc.version>2.3.0</springdoc.version>
   </properties>
   <dependencies>
     <dependency>
@@ -41,8 +42,13 @@
 
     <dependency>
       <groupId>org.springdoc</groupId>
-      <artifactId>springdoc-openapi-ui</artifactId>
-      <version>1.5.12</version>
+      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+      <version>${springdoc.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
+      <version>${springdoc.version}</version>
     </dependency>
 
     <dependency>
