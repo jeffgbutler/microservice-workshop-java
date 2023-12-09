@@ -1,0 +1,18 @@
+info:
+  app:
+    name: Eureka Server 2
+
+server:
+  port: 8762
+
+spring:
+  application:
+    name: Eureka Server 2
+
+eureka:
+  instance:
+    hostname: eureka2.127.0.0.1.nip.io
+  client:
+    serviceUrl:
+      defaultZone: http://eureka1.127.0.0.1.nip.io:8761/eureka/
+

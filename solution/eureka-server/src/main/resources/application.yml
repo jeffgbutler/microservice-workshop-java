@@ -1,13 +1,17 @@
 info:
   app:
-    name: Eureka Server
+    name: Eureka Server 1
 
 server:
   port: 8761
 
+spring:
+  application:
+    name: Eureka Server 1
+
 eureka:
   instance:
-    hostname: localhost
+    hostname: eureka1.127.0.0.1.nip.io
   client:
     serviceUrl:
-      defaultZone: http://localhost:8762/eureka/
+      defaultZone: http://eureka2.127.0.0.1.nip.io:8762/eureka/

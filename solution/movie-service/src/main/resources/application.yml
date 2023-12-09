@@ -19,4 +19,4 @@ springdoc:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka1.127.0.0.1.nip.io:8761/eureka/
