@@ -1,15 +1,15 @@
 package microservice.workshop.movieaggregatorservice.model;
 
 public class MovieAward {
-    private int year;
+    private int awardYear;
     private String award;
 
-    public int getYear() {
-        return year;
+    public int getAwardYear() {
+        return awardYear;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public void setAwardYear(int awardYear) {
+        this.awardYear = awardYear;
     }
 
     public String getAward() {

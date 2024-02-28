@@ -2,8 +2,17 @@ info:
   app:
     name: Movie Aggregator Service
 
+spring:
+  application:
+    name: movie-aggregator-service
+
 server:
   port: 8080
+
+serviceUrls:
+  movieService: http://localhost:8081
+  movieCastService: http://localhost:8082
+  movieAwardService: http://localhost:8083
 
 # TODO - uncomment (Exercise 5)
 #feign:

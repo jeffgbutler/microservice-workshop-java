@@ -5,6 +5,10 @@ info:
 server:
   port: 8080
 
+spring:
+  application:
+    name: movie-aggregator-service
+
 # TODO - uncomment (Exercise 5)
 #feign:
 #  hystrix:

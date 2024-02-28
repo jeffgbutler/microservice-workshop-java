@@ -16,9 +16,12 @@ import microservice.workshop.movieawardservice.model.Award;
 @RequestMapping("/award")
 public class AwardController {
 
-    @Autowired
-    private AwardRepository repository;
-    
+    private final AwardRepository repository;
+
+    public AwardController(AwardRepository repository) {
+        this.repository = repository;
+    }
+
     @GetMapping("/search")
     public ResponseEntity<List<Award>> search(@RequestParam("movieId") Integer movieId) {
         return ResponseEntity.ok(repository.findByMovieId(movieId));

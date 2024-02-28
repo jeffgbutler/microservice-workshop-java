@@ -3,9 +3,11 @@ info:
     name: Movie Cast Service
 
 server:
-  port: 8082
+  port: 8092
 
 spring:
+  application:
+    name: movie-cast-service
   h2:
     console:
       enabled: true

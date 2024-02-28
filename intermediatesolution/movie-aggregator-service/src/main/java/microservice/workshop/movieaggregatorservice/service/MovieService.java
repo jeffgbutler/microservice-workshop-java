@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import microservice.workshop.movieaggregatorservice.model.Movie;
 
-@FeignClient(name="movie-service", decode404 = true, url="http://localhost:8081")
+@FeignClient(name="movie-service", dismiss404 = true, url="${serviceUrls.movieService}")
 public interface MovieService {
 
     @GetMapping("/movie/{id}")

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import microservice.workshop.movieaggregatorservice.model.MovieAward;
 
-@FeignClient(name="movie-award-service", url="http://localhost:8083")
+@FeignClient(name="movie-award-service", url="${serviceUrls.movieAwardService}")
 public interface MovieAwardService {
     @GetMapping("/award/search")
     List<MovieAward> findAwardsForMovie(@RequestParam("movieId") Integer movieId);

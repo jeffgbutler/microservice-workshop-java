@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import microservice.workshop.movieaggregatorservice.model.CastMember;
 
-@FeignClient(name="movie-cast-service", url="http://localhost:8082")
+@FeignClient(name="movie-cast-service", url="${serviceUrls.movieCastService}")
 public interface MovieCastService {
 
     @GetMapping("/cast/search")

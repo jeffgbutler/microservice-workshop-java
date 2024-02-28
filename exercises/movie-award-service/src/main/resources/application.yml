@@ -3,9 +3,11 @@ info:
     name: Movie Award Service
 
 server:
-  port: 8083
+  port: 8093
 
 spring:
+  application:
+    name: movie-award-service
   h2:
     console:
       enabled: true
