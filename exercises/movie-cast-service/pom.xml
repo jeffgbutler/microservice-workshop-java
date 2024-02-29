@@ -28,6 +28,10 @@
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
     <dependency>
@@ -35,7 +39,7 @@
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
     
-<!-- TODO (Exercise 4) - uncomment this dependency. With this starter, the app will register with a Eureka
+<!-- TODO (Exercise 5) - uncomment this dependency. With this starter, the app will register with a Eureka
      server on the default port of 8761.
      
     <dependency>

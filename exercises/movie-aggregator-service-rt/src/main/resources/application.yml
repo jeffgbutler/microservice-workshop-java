@@ -1,0 +1,10 @@
+info:
+  app:
+    name: Movie Aggregator Service RT
+
+server:
+  port: 8081
+
+spring:
+  application:
+    name: movie-aggregator-service-rt
